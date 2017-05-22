@@ -1,0 +1,68 @@
+turno
+	codigoTurno	NUMBER
+	descripcion	VARCHAR2(100)
+	horarioEntrada DATE
+	horarioSalida	DATE
+	
+empleado
+	codigoEmpleado NUMBER
+	nombre			VARCHAR2(50)
+	apellido		VARCHAR2(50)
+	codigoTurno 	NUMBER
+	estado			CHAR DEFAULT 'A'
+	usuario			VARCHAR2(20)
+	contraseña		VARCHAR2(20)
+	
+cocheras
+	codigo  		NUMBER
+	piso		NUMBER
+	descripcion	VARCHAR2(50)	
+	especial 	CHAR DEFAULT 'N'	
+	sucursal	NUMBER DEFAULT 1
+	
+listaPrecio
+	codigoPrecio	NUMBER
+	tipoMonto 	CHAR
+	descripcion	VARCHAR2(50)
+	rangoDDHoras NUMBER
+	rangoHHHoras NUMBER
+	monto		NUMBER(10,2)
+	tipoPrecio  NUMBER
+
+ingresos
+	codigoPago	NUMBER
+	codigoPrecio  NUMBER
+	codigoCochera NUMBER
+	patente		VARCHAR2(20)
+	color		VARCHAR2(10)
+	marcaAutomovil VARCHAR2(10)
+	monto		NUMBER(10,2)
+	horaIngreso	DATE
+	horaSalida	DATE
+	fecha		DATE
+	codigoEmpleadoIngreso	NUMBER
+	codigoEmpleadoEgreso	NUMBER
+	
+***************adicionales******************
+
+pagoAbonados (tabla relacional de precios con abonados)
+	codigoPrecio
+	codigoAbonado
+	fechaInicio
+	fechaFin
+	montoPagado (Figurara un valor si se pago el importe, si no figura nada u el precio aumenta se cobrara el precio actual)
+	
+abonados
+	codigo
+	patente
+	nombre 
+	apellido
+	domicilio
+	telefono
+	
+
+entradaEmpleado
+	codigoEmpleado
+	horarioEntrada
+	horarioSalida
+	sucursal

@@ -16,10 +16,8 @@ empleado
 cocheras
 	codigo  (199,299,399)
 	piso	(1,2,3)
-	descripcion
-	estado  (ocupado, libre)
-	especial (s,n prioridad embarazadas)
-	patente		(Si este campo es distinto de nulo es porque esta ocupada)
+	descripcion	
+	especial (s,n prioridad embarazadas)	
 	sucursal	(default 01, fuera de alcance)
 	
 listaPrecio
@@ -31,7 +29,7 @@ listaPrecio
 	monto
 	tipoPrecio (sera 1 si el costo es diario para entrar dentro del calculo diario, 0 si es mensual o quincenal)
 
-pagos
+ingresos
 	codigoPago
 	codigoPrecio (no se colocara valor hasta que no salga el vehiculo)
 	codigoCochera (se le asignara una cochera al ingresar)
@@ -40,7 +38,7 @@ pagos
 	marcaAutomovil (al ingresar)
 	monto		(al salir)(si es nulo y es de tipo diario es porque aun esta estacionado)
 	horaIngreso	(al ingresar)
-	horaSalida	(al salir)
+	horaSalida	(al salir)(se utilizara para determinar si la cochera esta ocupada = null)
 	fecha		(al ingresar)(se validara la fecha, ya que si la salida la hace al otro dia se le cobra estadia y luego el proporcional del dia corriente)
 	codigoEmpleadoIngreso	(al ingresar)
 	codigoEmpleadoEgreso	(al salir)(servira para arqueo diario, por si un auto entra en un turno y paga y sale en el otro )
