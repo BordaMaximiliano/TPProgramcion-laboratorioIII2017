@@ -10,6 +10,7 @@ empleado
 	apellido		VARCHAR2(50)
 	codigoTurno 	NUMBER
 	estado			CHAR DEFAULT 'A'
+	tipoUsuario  	CHAR DEFAULT 'C'
 	usuario			VARCHAR2(20)
 	contraseña		VARCHAR2(20)
 	
@@ -27,7 +28,7 @@ listaPrecio
 	rangoDDHoras NUMBER
 	rangoHHHoras NUMBER
 	monto		NUMBER(10,2)
-	tipoPrecio  NUMBER
+	tipoPrecio  VARCHAR2(1)
 
 ingresos
 	codigoPago	NUMBER
@@ -37,8 +38,8 @@ ingresos
 	color		VARCHAR2(10)
 	marcaAutomovil VARCHAR2(10)
 	monto		NUMBER(10,2)
-	horaIngreso	DATE
-	horaSalida	DATE
+	Ingreso	DATE
+	Salida	DATE
 	fecha		DATE
 	codigoEmpleadoIngreso	NUMBER
 	codigoEmpleadoEgreso	NUMBER

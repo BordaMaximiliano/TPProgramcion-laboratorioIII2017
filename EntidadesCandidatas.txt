@@ -10,6 +10,7 @@ empleado
 	apellido
 	turnoAsignado (codigoTurno)
 	estado	(baja logica)
+	tipoUsuario (definira si es administrador 'A' o usuario normal 'C')
 	usuario
 	contraseña
 	
@@ -27,18 +28,23 @@ listaPrecio
 	rangoDDHoras (se coloca la cantidad minima de horas para esta categoria)
 	rangoHHHoras (se coloca la cantidad maxima de horas para esta categoria)
 	monto
-	tipoPrecio (sera 1 si el costo es diario para entrar dentro del calculo diario, 0 si es mensual o quincenal)
+	tipoPrecio (sera D si el costo es diario para entrar dentro del calculo diario, M si es mensual o quincenal)
 
+vehiculo
+	id
+	patente
+	color		(al ingresar)
+	marcaAutomovil (al ingresar)
+	tipoVehiculo (si es camioneta 'C', auto 'A', moto 'M')
+	
 ingresos
 	codigoPago
 	codigoPrecio (no se colocara valor hasta que no salga el vehiculo)
 	codigoCochera (se le asignara una cochera al ingresar)
-	patente		(al ingresar)
-	color		(al ingresar)
-	marcaAutomovil (al ingresar)
+	idVehiculo	(Se asignara al ingresar)
 	monto		(al salir)(si es nulo y es de tipo diario es porque aun esta estacionado)
-	horaIngreso	(al ingresar)
-	horaSalida	(al salir)(se utilizara para determinar si la cochera esta ocupada = null)
+	HIngreso	(al ingresar)
+	HSalida	(al salir)(se utilizara para determinar si la cochera esta ocupada = null)
 	fecha		(al ingresar)(se validara la fecha, ya que si la salida la hace al otro dia se le cobra estadia y luego el proporcional del dia corriente)
 	codigoEmpleadoIngreso	(al ingresar)
 	codigoEmpleadoEgreso	(al salir)(servira para arqueo diario, por si un auto entra en un turno y paga y sale en el otro )
