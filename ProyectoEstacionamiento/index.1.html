@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Estacionamiento</title>
+    <meta charset="utf-8">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+
+<body>
+
+
+    <!--
+    efecto fade (no aparece)   /  show (visible)
+    data-backdrop evita que se cierre al hacer click afuera del dialogo
+    data-backdrop="static"
+    data-keyboard="false" 
+    aria-hidden="true"
+    aria-labelledby="loginModalLabel"
+    FUNCIONALIDAD: se creo un manejador de evento para el boton validar desde login.js cuya funcion es la dellamar mediante ayax al back end.
+    -->
+    <!--login modal-->
+
+
+    <h1 class="text-center">Login</h1>
+
+
+
+    <input type="text" class="form-control input-lg" id="login_username" placeholder="Username">
+
+    <input type="password" class="form-control input-lg" id="password" placeholder="Password">
+
+    <button id="validar" class="btn btn-primary btn-lg btn-block">Sign In</button>
+    <button id="validarusuario" onclick="validaruser();" class="btn btn-primary btn-lg btn-block">Sign In</button>
+
+
+    <label id="resultado">Female</label>
+
+
+    <!-- script references -->
+
+
+
+</body>
+
+</html>
